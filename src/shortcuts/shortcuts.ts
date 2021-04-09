@@ -11,7 +11,7 @@
 
 class Bag {
     constructor(
-        items: string[]
+        protected items: string[]
     ) { }
 
     lookInside() {
@@ -21,11 +21,13 @@ class Bag {
 
 class BrandedBag extends Bag {
     constructor(
-        logo: string,
-        brand: string,
+        public logo: string,
+        public brand: string,
         items: string[]
     ) {
         super(items);
+        this.logo = logo;
+        this.brand = brand;
     }
 
     checkBrand() {
